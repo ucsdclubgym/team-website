@@ -14,7 +14,7 @@ nav {
   border-bottom: 1px solid #eee;
 }
 
-#nav-inner {
+.nav-inner {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -24,7 +24,7 @@ nav {
   justify-content: space-between;
 }
 
-#nav-toggle {
+.nav-toggle {
   display: none; /* hidden by default */
   background: transparent;
   border: none;
@@ -33,11 +33,11 @@ nav {
   color: #F5F0E6;
 }
 
-#logo {
+.logo {
   max-height: 50px;
 }
 
-#nav-links {
+.nav-links {
   display: flex;
   gap: 1.5rem;
   list-style: none;
@@ -46,7 +46,7 @@ nav {
   flex-direction: row;
 }
 
-#nav-links a {
+.nav-links a {
   text-decoration: none;
   /* color: #FFCD00; */
   color: #F5F0E6;
@@ -59,13 +59,13 @@ nav {
   border-bottom: 2px solid;
 } */
 
-#nav-links a:hover {
+.nav-links a:hover {
   /* color: #FFCD00; */
   color: #B6B1A9
 }
 
 @media (max-width: 900px) {
-  #nav-toggle {
+  .nav-toggle {
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
@@ -74,7 +74,7 @@ nav {
     color: #F5F0E6;
   }
 
-  #nav-inner {
+  .nav-inner {
     /*flex-wrap: wrap;*/    /*allows nav menu to drop below navbar*/
     position: relative;
     margin: 0;
@@ -90,7 +90,7 @@ nav {
     padding-top: 0;
   } */
 
-  #nav-links {
+  .nav-links {
     display: none;              /* hidden until opened*/
     position: absolute;
     top: 100%;                  /* directly below nav bar*/
@@ -105,11 +105,11 @@ nav {
     gap: 0.5rem;
   }
 
-  #nav-links li {
+  .nav-links li {
     padding: 0.4rem 0;
   }
 
-  #nav-links a {
+  .nav-links a {
     display: block;
     width: 100%;
     padding: 0.4rem 0;
@@ -121,7 +121,7 @@ nav {
   }
 
   /* When menu is open, show links */
-  #nav-links.nav-open {
+  .nav-links.nav-open {
     display: flex;    /* links frop from hte top */ 
   }
 }

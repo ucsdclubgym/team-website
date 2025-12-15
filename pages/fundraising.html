@@ -7,16 +7,15 @@
   <title>UCSD Gymnastics</title>
   <link rel="icon" href="../images/Trident_Blue.png" type="image/png">
   <link rel="stylesheet" href="../style/general.css">
+  <link rel="stylesheet" href="../style/quotes.css">
 </head>
 <body>
   <nav aria-label="Main nagivation">
-    <div id="nav-inner">
-      <a href="../index.html"><img src="../images/Logo1.png" alt="UCSD Gymnastics" id="logo"></a>
-      <!-- hamburger button (only visible on mobile) -->
-      <button id="nav-toggle" aria-label="Toggle navigation" aria-controls="nav-menu">☰</button>
+    <div class="nav-inner">
+      <a href="../index.html"><img src="../images/Logo1.png" alt="UCSD Gymnastics" class="logo"></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-controls="nav-menu">☰</button>
     
-      <ul id="nav-links">
-        <!-- <li><a href="../index.html">Home</a></li> -->
+      <ul class="nav-links" id="nav-links">
         <li><a href="about.html">About</a></li>
         <li><a href="schedule.html">Schedule</a></li>
         <li><a href="highlights.html">Highlights</a></li>
@@ -37,6 +36,16 @@
     well this season. Everyone is getting excited to attend competitions and show
     off their hard work!
   </p>
+  <div id="quote-slider">
+    <div id="active quote-card">
+      <p class="quote">[insert quote here]</p>
+    </div>
+    <div class="quote-card">
+      <p class="quote">[insert quote2 here]</p>
+    </div>
+    <button class="left arrow" id="prevQuote">‹</button>
+    <button class="right arrow" id="nextQuote">›</button>
+  </div>
   <a href="https://giveto.ucsd.edu/giving/home/?linkId=62ec04e6-9879-45e5-8457-1fb59cf5a754" target="_blank">
     <button>Donate Now!</button>
   </a>
