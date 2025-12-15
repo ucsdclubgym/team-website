@@ -11,7 +11,7 @@
 #quoteContainer {
   position: relative;
   aspect-ratio: 6/5;
-  width: 70%;
+  width: 80%;
   max-width: 750px;
   margin: 0 auto;
   overflow: hidden;
@@ -23,14 +23,9 @@
 .quote-card {
   position: absolute;
   inset: 0;
-  /* top: 0;
-  left: 0; */
-  /* width: 100%; */
   opacity: 0;
   transition: opacity 0.45s ease;
   padding: 30px;
-  /* box-sizing: border-box; */
-  /* background: white; */
   font-size: 1.1rem;
   line-height: 2;
   display: flex;
@@ -40,6 +35,20 @@
   pointer-events: none;
   visibility: hidden;
   overflow-y: auto;
+  scrollbar-color: lightgray transparent;
+  scrollbar-width: thin;
+}
+
+/* WebKit (Safari + Chrome + Edge) */
+.quote-card.active::-webkit-scrollbar {
+  width: 6px;
+}
+.quote-card.active::-webkit-scrollbar-track {
+  background: transparent;
+}
+.quote-card.active::-webkit-scrollbar-thumb {
+  background-color: lightgray;
+  border-radius: 10px;
 }
 
 .quote-card.active {
@@ -78,10 +87,6 @@
 }
 
 @media (max-width: 900px) {
-  /* #quote-slider {
-    width: 55%;
-    max-width: none;
-  } */
   #quoteContainer {
     width: 90%;
     aspect-ratio: 6/5;
