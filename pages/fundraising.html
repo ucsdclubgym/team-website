@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCSD Gymnastics</title>
+  <link rel="stylesheet" href="../style/general.css">
+</head>
+<body>
+  <nav aria-label="Main nagivation">
+    <div id="nav-inner">
+      <a href="../index.html"><img src="../images/Logo1.png" alt="UCSD Gymnastics" id="logo"></a>
+      <!-- hamburger button (only visible on mobile) -->
+      <button id="nav-toggle" aria-label="Toggle navigation" aria-controls="nav-menu">☰</button>
+    
+      <ul id="nav-links">
+        <!-- <li><a href="../index.html">Home</a></li> -->
+        <li><a href="about.html">About</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="highlights.html">Highlights</a></li>
+        <li><a href="fundraising.html" aria-current="page">Fundraising</a></li>
+        <li><a href="outreach.html">Outreach</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <h1>Fundraising</h1>
+  <p>
+    UCSD Club Gymnastics is composed of athletes with all different backgrounds
+    and experience levels. Despite everyone’s different gymnastics journeys, we
+    have been able to come together as a team and bond over this shared passion,
+    and we are excited to take this into our competitions. Our team has been
+    working hard to learn new skills and perfect routines in hopes of performing
+    well this season. Everyone is getting excited to attend competitions and show
+    off their hard work!
+  </p>
+  <a href="https://giveto.ucsd.edu/giving/home/?linkId=62ec04e6-9879-45e5-8457-1fb59cf5a754" target="_blank">
+    <button>Donate Now!</button>
+  </a>
+
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-links');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isOpen);
+      navMenu.classList.toggle('nav-open');
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  background-color: #182B49;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+
+#nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+#nav-toggle {
+  display: none; /* hidden by default */
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #F5F0E6;
+}
+
+#logo {
+  max-height: 50px;
+}
+
+#nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+}
+
+#nav-links a {
+  text-decoration: none;
+  /* color: #FFCD00; */
+  color: #F5F0E6;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  padding: 0.5rem 0.25rem
+}
+
+/* nav a[aria-current="page"] {
+  border-bottom: 2px solid;
+} */
+
+#nav-links a:hover {
+  /* color: #FFCD00; */
+  color: #B6B1A9
+}
+
+@media (max-width: 900px) {
+  #nav-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    color: #F5F0E6;
+  }
+
+  #nav-inner {
+    /*flex-wrap: wrap;*/    /*allows nav menu to drop below navbar*/
+    position: relative;
+    margin: 0;
+    width: 100%;
+  }
+
+  /* #nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
+    padding-top: 0;
+  } */
+
+  #nav-links {
+    display: none;              /* hidden until opened*/
+    position: absolute;
+    top: 100%;                  /* directly below nav bar*/
+    right: 0.25rem;                /* aligned under hamburger*/
+    width: 180px;               /* control menu width*/
+    background: #182B49;
+    border-radius: 6px;
+    flex-direction: column;
+    padding: 0.5rem 0.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 2000;
+    gap: 0.5rem;
+  }
+
+  #nav-links li {
+    padding: 0.4rem 0;
+  }
+
+  #nav-links a {
+    display: block;
+    width: 100%;
+    padding: 0.4rem 0;
+  }
+
+  nav a[aria-current="page"] {
+    border-bottom: none;
+
+  }
+
+  /* When menu is open, show links */
+  #nav-links.nav-open {
+    display: flex;    /* links frop from hte top */ 
+  }
+}
