@@ -25,6 +25,20 @@
     </div>
   </nav>
   <h1>Schedule</h1>
+  <div id="nationalsCountdown">
+    <span id="days"></span> days until Nationals!
+  </div>
   <script src="../scripts/navbar.js"></script>
+  <script>
+    const nationalsDate = new Date('2026-04-08');
+    function updateCountdown() {
+      const now = new Date();
+      const diff = nationalsDate - now;
+      const daysLeft = Math.floor(diff / (1000 * 60 * 60 * 24)); // convert ms to days
+      document.getElementById('days').textContent = daysLeft;
+    }
+    updateCountdown(); // initial call to set the countdown
+    setInterval(updateCountdown, 1000 * 60); // update every minute
+  </script>
 </body>
 </html>

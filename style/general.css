@@ -64,6 +64,17 @@ nav {
   color: #B6B1A9
 }
 
+#nationalsCountdown {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px;
+  color: #182B49;
+  border: #182B49 1px solid;
+  width: 80%;
+  margin: auto;
+}
+
 @media (max-width: 900px) {
   .nav-toggle {
     display: inline-flex;
