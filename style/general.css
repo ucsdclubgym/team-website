@@ -94,7 +94,7 @@ nav {
     display: none;              /* hidden until opened*/
     position: absolute;
     top: 100%;                  /* directly below nav bar*/
-    right: 0.25rem;                /* aligned under hamburger*/
+    right: 0.1rem;                /* aligned under hamburger*/
     width: 180px;               /* control menu width*/
     background: #182B49;
     border-radius: 6px;
