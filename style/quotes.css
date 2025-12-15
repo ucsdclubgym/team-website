@@ -1,29 +1,92 @@
 #quote-slider {
   position: relative;
-  width: 70%;
-  max-width: 700px;
-  margin: 40px auto;
+  width: 55%;
+  max-width: 550px;
+  margin: 50px auto;
   text-align: center;
-  min-height: 180px;
+  min-height: 250px;
+  transition: height 0.5s ease; /* smooth resizing */
+}
+
+#quoteContainer {
+  position: relative;
+  aspect-ratio: 6/5;
+  width: 70%;
+  max-width: 750px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .quote-card {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  inset: 0;
+  /* top: 0;
+  left: 0; */
+  /* width: 100%; */
   opacity: 0;
-  transition: opacity 1.2s ease;
+  transition: opacity 0.45s ease;
   padding: 30px;
-  box-sizing: border-box;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  /* box-sizing: border-box; */
+  /* background: white; */
   font-size: 1.1rem;
-  line-height: 1.7;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  visibility: hidden;
+  overflow-y: auto;
 }
 
 .quote-card.active {
   opacity: 1;
-  position: relative;
+  visibility: visible;
+  pointer-events: auto;
 }
 
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  font-size: 2rem;
+  padding: 5px 12px;
+  border-radius: 8px;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.arrow:hover {
+  opacity: 1;
+}
+
+.arrow.left {
+  left: -50px;
+}
+
+.arrow.right {
+  right: -50px;
+}
+
+@media (max-width: 900px) {
+  /* #quote-slider {
+    width: 55%;
+    max-width: none;
+  } */
+  #quoteContainer {
+    width: 90%;
+    aspect-ratio: 6/5;
+    padding: 0 10px;
+  }
+  .arrow.left {left: -10px;}
+  .arrow.right {right: -10px;}
+}
